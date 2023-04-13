@@ -12,7 +12,7 @@ $quantite = 5;
 $tva = 0.2;
 $factureHtc = $prixHtc * $quantite;
 $tvafacture = $factureHtc * $tva;
-$factureTtc = $factureHtc + $tvafacture;
+$factureTtc = $factureHtc + $tvafacture
 
 echo "Prix unitaire de l'article : $prixHtc € <br>";
 echo "Quantité : $quantite <br>";
