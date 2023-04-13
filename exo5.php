@@ -10,8 +10,10 @@ Attention, la valeur générée devra être arrondie à 2 décimales.
 
 $Franc = 100;
 $euros = $Franc/6.55957;
+$eurosArrondi = round($euros, 2);
 
 
 echo "Montant en francs : $Franc <br>";
-echo "$Franc francs = $euros € <br>";
+echo "$Franc francs = $eurosArrondi € <br>";
+
  // 1 fr = 0.15244
