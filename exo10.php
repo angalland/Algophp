@@ -15,7 +15,9 @@ $restepaye = $montverse - $montpaye;
 echo "$restepaye";
 $billet = 10;
 
+echo "<br>";
+
 while($restepaye != $billet){
-    echo $billet."";
+    echo $billet." <br>";
     $billet++;
 }
