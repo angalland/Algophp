@@ -13,7 +13,9 @@ $montverse = 200;
 $restepaye = $montverse - $montpaye;
 
 echo "$restepaye";
+$billet = 10;
 
-$billet = array[10, 5, 2, 1]
-
-for()
+while($restepaye != $billet){
+    echo $billet."";
+    $billet++;
+}
