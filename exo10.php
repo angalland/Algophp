@@ -38,3 +38,38 @@ echo "Rendu de monnaie : <br>";
 
     $i4 = floor($m3/$mon1); //1
     echo " - $i4 piece de 1€";
+
+echo "<br>";
+
+$amount = 152;
+$paid = 200;
+$remain = $paid - $amount;
+
+$currency = [
+    [
+        "valeur" => 10,
+        "type" => "billet(s)"
+    ],
+    [
+        "valeur" => 5,
+        "type" => "billet(s)",
+    ],
+    [
+        "valeur" => 2,
+        "type" => "piece(s)",
+    ],
+    [
+        "valeur" => 1,
+        "type" => "piece(s)",
+    ]
+    ];
+
+    foreach ($currency as $money) {
+        $result = floor($remain / $money["valeur"]); //4
+        echo $result." ".$money["type"]." de ".$money["valeur"]."€ - ";
+        $remain = $remain % $money["valeur"];//8
+    }
+
+echo "<br>";
+
+
