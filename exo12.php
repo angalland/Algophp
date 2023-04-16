@@ -9,6 +9,24 @@ respective (français ➔ « Salut », anglais ➔ « Hello », espagnol ➔ « 
 
 <?php
 
-$people = array("Mickaël"->FRA, "Virgile"->ESP, "Marie-claire"->ENG);
-$langue = array("Salut"->FRA, "Hello"->ENG, "Hola"->ESP);
+$people = [ 
+            [ "Mickaël"=>"FRA",
+              "français"=>"Salut",
+            ], 
+            ["Virgile"=>"ESP",
+             "espagnol"=>"Hola",
+            ],
+            ["Marie-claire"=>"ENG",
+             "anglais"=>"Hello"
+            ]
+        ];
+
+//var_dump ($people);
+
+
+function bonjourCelonLaLangue($people) {
+   
+}
+
+echo bonjourCelonLaLangue("Mickaël", "FRA");
 
