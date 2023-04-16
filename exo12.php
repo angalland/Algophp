@@ -10,23 +10,39 @@ respective (français ➔ « Salut », anglais ➔ « Hello », espagnol ➔ « 
 <?php
 
 $people = [ 
-            [ "Mickaël"=>"FRA",
-              "français"=>"Salut",
-            ], 
-            ["Virgile"=>"ESP",
-             "espagnol"=>"Hola",
-            ],
-            ["Marie-claire"=>"ENG",
-             "anglais"=>"Hello"
-            ]
+          [
+            "prenom" => "mickael",
+            "langue" => "FRA",
+          ],
+          [
+            "prenom"=> "virgile",
+            "langue"=> "ESP",
+          ],
+          [
+            "prenom" => "Marie-claire",
+            "langue" => "ENG",
+          ]
         ];
 
 //var_dump ($people);
 
 
-function bonjourCelonLaLangue($people) {
+function bonjourSelonLaLangue($people) {
+  foreach ($people as $person) {
+     if ($person["langue"] == "FRA") {
+       echo "Bonjour";
+     } else if ($person["langue"] == "ESP") {
+       echo "Hola";
+     } else  if ($person["langue"] == "ENG"){
+       echo "Hello";
+     } else {
+       echo "Langage inconnue";
+     } 
+      echo " ".$person["prenom"];
+      echo "<br>";
+   }
    
 }
 
-echo bonjourCelonLaLangue("Mickaël", "FRA");
+bonjourSelonLaLangue($people);
 
