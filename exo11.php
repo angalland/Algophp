@@ -8,8 +8,7 @@
 
 $marquedevoiture = array("Peugeot", "Renault", "BMW", "Mercedes", "Toyota", "citroen");
 $nombredemarque = count($marquedevoiture);
-echo "il y a ".$nombredemarque." marques de voitures dans le tableau : <br>";
-echo $marquedevoiture[0]."<br>";
-echo $marquedevoiture[1]."<br>";
-echo $marquedevoiture[2]."<br>";
-echo $marquedevoiture[3]."<br>";
+echo $nombredemarque."<br>";
+foreach ($marquedevoiture as $nomDeMarque) {
+    echo $nomDeMarque."<br>";
+}
