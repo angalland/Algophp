@@ -6,14 +6,11 @@
 
 <?php
 
-function calculerage($date) {
-    $dateNaissance = new DateTime($date);
-    $dateJour = new DateTime();
+$today = new DateTime();
+$birth_date = DateTime::createFromFormat('d/m/Y', "02/01/1991");
 
-    $difference = $dateNaissance ->diff($dateJour);
+$diff = $today->diff($birth_date);
 
-    return $difference ->format("%D/%M/%Y");
-}
+echo "Age de la personne : " . $diff->y . " an(s) " . $diff->m . " mois " . $diff->d . " jour(s)";
 
-echo calculerage(1991-02-15);
 
