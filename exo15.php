@@ -58,22 +58,27 @@ class Personne {
         $this->_dateNaissance = $dateNaissance;
     }
 
+    public function calculeAge(){
+        $today = new DateTime();
+        $birth_date = $this->getdateNaissance();
+        $diff = $today->diff($birth_date);
+        return $diff->y;
+    }
+
+    public function __toString(){
+        return $this->_prenom." ".$this->_nom." a ".$this->calculeAge()." ans <br>";
+        
+    }
+
+
 }
 
 
 $p1 = new Personne("DUPONT","Michel","Masculin", "1980-02-19");
 $p2 = new Personne("DUCHEMIN","Alice","Feminin","1985-01-17");
 
-$today = new DateTime;
-$birth_date = $p1->_dateNaissance;
-$diff = $today->diff($birth_date);
-
-$birth_day2 = $p2->_dateNaissance;
-$diff1 = $today->diff($birth_day2);
 
 
 
-echo $p1->getnom()." ".$p1->getprenom()." a ".$diff->y." ans <br>";
-echo $p2->getnom()." ".$p2->getprenom()." a ".$diff1->y." ans <br>";
-
-
+echo $p1;
+echo $p2;
