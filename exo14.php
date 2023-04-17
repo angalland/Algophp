@@ -6,8 +6,8 @@
 
 <?php
 
-$today = new DateTime();
-$birth_date = DateTime::createFromFormat('d/m/Y', "02/01/1991");
+$today = new DateTime;
+$birth_date = DateTime::createFromFormat('d/m/Y', "17/01/1985");
 
 $diff = $today->diff($birth_date);
 
